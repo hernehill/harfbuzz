@@ -1,0 +1,6 @@
+# IDEs
+.vscode
+.idea
+
+# REZ
+_rez_build
