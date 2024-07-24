@@ -33,7 +33,6 @@ def commands():
 
     env.PATH.append("{root}/lib64")
     env.LD_LIBRARY_PATH.append("{root}/lib64")
-    env.PKG_CONFIG_PATH.append("{root}/lib64/pkgconfig")
 
 
 uuid = "repository.harfbuzz"
