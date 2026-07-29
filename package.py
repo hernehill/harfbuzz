@@ -19,7 +19,7 @@ requires = [
     "libpng",
 ]
 
-private_build_requires = []
+private_build_requires = ["visual_studio"]
 
 variants = []
 
@@ -29,10 +29,14 @@ def commands():
     env.HARFBUZZ_ROOT = "{root}"
     env.HARFBUZZ_LOCATION = "{root}"
     env.HARFBUZZ_INCLUDE_DIR = "{root}/include"
-    env.HARFBUZZ_LIBRARY_DIR = "{root}/lib64"
+    env.HARFBUZZ_LIBRARY_DIR = "{root}/lib"
 
-    env.PATH.append("{root}/lib64")
-    env.LD_LIBRARY_PATH.append("{root}/lib64")
+    env.PATH.append("{root}/lib")
+    env.PKG_CONFIG_PATH.append("{root}/lib/pkgconfig")
+
+    # For FFmpeg to be able to find headers and libraries
+    env.CPATH.append("{root}/include")
+    env.LIBRARY_PATH.append("{root}/lib")
 
 
 uuid = "repository.harfbuzz"
