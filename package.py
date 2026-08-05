@@ -1,6 +1,6 @@
 name = "harfbuzz"
 
-version = "8.2.1.hh.1.0.0"
+version = "8.2.1.hh.1.0.1"
 
 authors = [
     "Harfbuzz",
